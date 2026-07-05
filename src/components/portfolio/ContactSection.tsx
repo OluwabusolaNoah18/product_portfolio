@@ -53,12 +53,12 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Email</p>
-                <p className="font-medium">oluwabusola.ruth@gmail.com</p>
+                <p className="font-medium">noaholuwabusola3@gmail.com</p>
               </div>
             </a>
 
             <a
-              href="https://linkedin.com/in/oluwabusola-noah-ruth"
+              href="https://www.linkedin.com/in/oluwabusola-noah"
               target="_blank"
               rel="noopener noreferrer"
               className="glass rounded-xl p-5 flex items-center gap-4 hover:border-primary/30 transition-colors group block"
@@ -72,9 +72,15 @@ const ContactSection = () => {
               </div>
             </a>
 
-            <Button variant="outline" className="w-full py-6 rounded-xl border-border hover:bg-secondary">
-              <Download className="mr-2 w-4 h-4" />
-              Download Resume
+            <Button asChild variant="outline" className="w-full py-6 rounded-xl border-border hover:bg-secondary">
+              <a
+                href="https://drive.google.com/file/d/1uFuIgO4rII6LDfEsJLUS4i0ccWHYwKxy/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2 w-4 h-4" />
+                View Resume
+              </a>
             </Button>
           </motion.div>
 

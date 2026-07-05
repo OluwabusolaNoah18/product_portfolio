@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Mail } from "lucide-react";
+import { ArrowDown, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -52,7 +52,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap"
         >
           <Button
             size="lg"
@@ -70,6 +70,16 @@ const HeroSection = () => {
           >
             <Mail className="mr-2 w-4 h-4" />
             Contact Me
+          </Button>
+          <Button asChild variant="ghost" size="lg" className="hover:bg-secondary px-8 py-6 text-base rounded-xl">
+            <a
+              href="https://drive.google.com/file/d/1uFuIgO4rII6LDfEsJLUS4i0ccWHYwKxy/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Download className="mr-2 w-4 h-4" />
+              View Resume
+            </a>
           </Button>
         </motion.div>
       </div>
