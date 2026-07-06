@@ -73,7 +73,7 @@ const HeroSection = () => {
           </Button>
           <Button asChild variant="ghost" size="lg" className="hover:bg-secondary px-8 py-6 text-base rounded-xl">
             <a
-              href="https://drive.google.com/file/d/1uFuIgO4rII6LDfEsJLUS4i0ccWHYwKxy/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1Ub7p3o1Osg08Go2RxAZJaqpEBje8k6pF/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
