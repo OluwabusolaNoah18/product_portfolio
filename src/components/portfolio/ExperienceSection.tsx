@@ -13,7 +13,7 @@ const experiences = [
   },
   {
     company: "Filton Avenue",
-    role: "Product Owner (Contract) — Fintech FX Platform",
+    role: "Product Owner (Contract), Fintech FX Platform",
     period: "May 2026 – Jun 2026",
     location: "United Kingdom",
     description:
@@ -25,7 +25,7 @@ const experiences = [
     period: "Sep 2025 – May 2026",
     location: "Lagos, Nigeria",
     description:
-      "Spearheaded 0-to-1 product development and launch. Defined MVP scope, PRDs, and user flows — improving delivery efficiency by 30%. Coordinated third-party partners and regulatory stakeholders, aligned go-to-market with product capabilities, and monitored post-launch metrics.",
+      "Spearheaded 0-to-1 product development and launch. Defined MVP scope, PRDs, and user flows, improving delivery efficiency by 30%. Coordinated third-party partners and regulatory stakeholders, aligned go-to-market with product capabilities, and monitored post-launch metrics.",
   },
   {
     company: "BeTechified",
@@ -37,11 +37,11 @@ const experiences = [
   },
   {
     company: "Young People in Tech (YPIT)",
-    role: "Program Manager — Hackathon & Conference (Volunteer)",
+    role: "Program Manager, Hackathon & Conference (Volunteer)",
     period: "Oct 2025 – Present",
     location: "Remote",
     description:
-      "Leading planning and execution of the YPIT Artificial Future Hackathon — onboarding, community engagement, event ops, and stakeholder coordination across virtual and in-person attendees.",
+      "Leading planning and execution of the YPIT Artificial Future Hackathon, onboarding, community engagement, event ops, and stakeholder coordination across virtual and in-person attendees.",
   },
 ];
 

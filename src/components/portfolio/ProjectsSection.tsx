@@ -23,7 +23,7 @@ const projects: Project[] = [
       {
         heading: "Problem",
         body:
-          "Our payment ecosystem was almost entirely card-dependent — customers could only pay via card across POS terminals and web. This created customer friction (users increasingly preferred transfers as faster, card-less, and more trusted) and competitive exposure (other fintechs already offered transfer-based payments). Internally, we had no virtual account infrastructure, so transfers couldn't be reliably reconciled to the right merchant or customer.",
+          "Our payment ecosystem was almost entirely card-dependent, customers could only pay via card across POS terminals and web. This created customer friction (users increasingly preferred transfers as faster, card-less, and more trusted) and competitive exposure (other fintechs already offered transfer-based payments). Internally, we had no virtual account infrastructure, so transfers couldn't be reliably reconciled to the right merchant or customer.",
       },
       {
         heading: "Goal",
@@ -33,26 +33,26 @@ const projects: Project[] = [
       {
         heading: "What I Analyzed",
         bullets: [
-          "Customer payment behavior — transaction data and support tickets showing rising preference for transfers",
-          "Competitor offerings — how other fintechs structured transfer/virtual account products",
-          "Internal technical readiness — no virtual account support, no monitoring dashboard",
-          "Partnership landscape — banks/MFIs that could issue static and dynamic virtual accounts at scale",
+          "Customer payment behavior, transaction data and support tickets showing rising preference for transfers",
+          "Competitor offerings, how other fintechs structured transfer/virtual account products",
+          "Internal technical readiness, no virtual account support, no monitoring dashboard",
+          "Partnership landscape, banks/MFIs that could issue static and dynamic virtual accounts at scale",
         ],
       },
       {
         heading: "Proposed Solution",
         bullets: [
           "Multi-channel enablement across e-commerce/web, payment gateway, and POS devices",
-          "Virtual account infrastructure — partnered with banks and MFIs to issue static (merchant-specific) and dynamic (transaction-specific) virtual accounts",
-          "Internal tooling — a virtual account management dashboard for ops to track, reconcile, and monitor transfer transactions",
-          "Phased rollout — gateway/web first, POS following once reconciliation was validated",
+          "Virtual account infrastructure, partnered with banks and MFIs to issue static (merchant-specific) and dynamic (transaction-specific) virtual accounts",
+          "Internal tooling, a virtual account management dashboard for ops to track, reconcile, and monitor transfer transactions",
+          "Phased rollout, gateway/web first, POS following once reconciliation was validated",
         ],
       },
       {
         heading: "Agile / Execution Approach",
         bullets: [
           "Stakeholder alignment with engineering, operations, and banking/MFI partners",
-          "Backlog prioritization — virtual account issuance and dashboard tooling ahead of POS rollout",
+          "Backlog prioritization, virtual account issuance and dashboard tooling ahead of POS rollout",
           "Incremental sprints: gateway → web → dashboard → POS (no big-bang launch)",
           "Cross-functional collaboration so the admin dashboard matched real ops workflows",
         ],
@@ -79,7 +79,7 @@ const projects: Project[] = [
       {
         heading: "Problem",
         body:
-          "Prophius's payment gateway needed to support multiple acquiring banks, but the existing model tightly coupled MIDs to individual merchants or PSPs. This meant no flexibility in acquirer usage, approval rates left on the table (no real-time routing to the most-likely-approver), no resilience against outages, and any routing/MID change required engineering — slowing down operations.",
+          "Prophius's payment gateway needed to support multiple acquiring banks, but the existing model tightly coupled MIDs to individual merchants or PSPs. This meant no flexibility in acquirer usage, approval rates left on the table (no real-time routing to the most-likely-approver), no resilience against outages, and any routing/MID change required engineering, slowing down operations.",
       },
       {
         heading: "Goal",
@@ -91,31 +91,31 @@ const projects: Project[] = [
         bullets: [
           "Current-state gaps in the MID-to-merchant coupling limiting approval rates and flexibility",
           "Routing logic parameters: transaction attributes, acquirer performance, per-MID volume caps, geographic fit, failover status",
-          "Failure handling — which decline reasons should trigger retry on a different acquirer vs. not",
-          "Admin/ops dashboard — rule creation, prioritization, MID management, and permissions with no dev dependency",
-          "Compliance and audit — PCI-DSS requirements and a full audit trail for every routing decision and config change",
-          "Extensibility — future acquirers or payment methods added without rearchitecting the core",
+          "Failure handling, which decline reasons should trigger retry on a different acquirer vs. not",
+          "Admin/ops dashboard, rule creation, prioritization, MID management, and permissions with no dev dependency",
+          "Compliance and audit, PCI-DSS requirements and a full audit trail for every routing decision and config change",
+          "Extensibility, future acquirers or payment methods added without rearchitecting the core",
         ],
       },
       {
         heading: "Solution Scoped",
         bullets: [
-          "MID Registry — a centralized, always-updatable registry decoupled from any single merchant/PSP",
+          "MID Registry, a centralized, always-updatable registry decoupled from any single merchant/PSP",
           "Real-time rule-based routing engine with millisecond-level decisioning",
-          "Cascading failover — automatic, invisible retry on a secondary acquirer when the primary fails",
+          "Cascading failover, automatic, invisible retry on a secondary acquirer when the primary fails",
           "Dynamic load balancing across MIDs/acquirers to avoid breaching contractual volume caps",
-          "Admin dashboard — configure rules, manage MIDs, and control access with near real-time propagation",
+          "Admin dashboard, configure rules, manage MIDs, and control access with near real-time propagation",
           "Immutable, queryable audit log of every routing decision and configuration change",
         ],
       },
       {
         heading: "Agile / Execution Approach",
         bullets: [
-          "Requirements-first scoping — full functional spec before implementation began",
+          "Requirements-first scoping, full functional spec before implementation began",
           "Close collaboration with engineering on real-time rule evaluation and a plugin-based acquirer connector model",
           "Non-functional requirements (performance, availability, scalability, security) treated as first-class scope",
           "Plugin/adapter architecture from day one for future acquirers and payment methods",
-          "Shipped, not just specified — saw the PRD through to a fully live system",
+          "Shipped, not just specified, saw the PRD through to a fully live system",
         ],
       },
       {
@@ -152,7 +152,7 @@ const ProjectsSection = () => {
           </h2>
           <p className="text-muted-foreground max-w-3xl mb-12 leading-relaxed">
             Two major product wins from my time as a Product Manager on a fintech platform spanning POS
-            terminal management, merchant onboarding, and payment processing — from spotting the gap to
+            terminal management, merchant onboarding, and payment processing, from spotting the gap to
             shipping the live product.
           </p>
         </motion.div>

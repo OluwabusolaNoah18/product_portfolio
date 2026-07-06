@@ -43,7 +43,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          I'm <span className="text-foreground font-semibold">Oluwabusola Noah Ruth</span> — a product leader 
+          I'm <span className="text-foreground font-semibold">Oluwabusola Noah Ruth</span>, a product leader 
           specializing in payment gateways, API integrations, and embedded finance. 
           I turn complex fintech challenges into seamless, scalable products.
         </motion.p>
