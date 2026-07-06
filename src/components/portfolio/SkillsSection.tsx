@@ -20,7 +20,7 @@ const skillCategories = [
   {
     title: "Tools & Platforms",
     color: "accent",
-    skills: ["Jira", "Figma", "Notion", "Miro", "Confluence", "Mixpanel", "Postman", "Slack"],
+    skills: ["Jira", "Figma", "Notion", "Miro", "Confluence", "Mixpanel", "Google Analytics", "Postman", "Slack"],
   },
 ];
 
