@@ -1,12 +1,27 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { TrendingUp, Zap, Shield, GraduationCap } from "lucide-react";
 
 const metrics = [
-  { icon: TrendingUp, value: "25%", label: "Onboarding Time Reduction", desc: "SoftPOS workflow optimization" },
-  { icon: Zap, value: "30%", label: "Delivery Efficiency Gain", desc: "Agile process improvements" },
-  { icon: Shield, value: "40%", label: "Blocker Reduction", desc: "Cross-functional alignment" },
-  { icon: GraduationCap, value: "2000+", label: "Learners Reached", desc: "Product mentorship & training" },
+  {
+    value: "32.5%",
+    label: "Merchant Base Growth",
+    desc: "52 new merchants added in 17 months against a total base of 160 built over 7 years — via the onboarding flow redesign and Pay with Transfer rollout at Prophius.",
+  },
+  {
+    value: "40%",
+    label: "Blocker Reduction / Sprint",
+    desc: "Proactive blocker triage and resolution tracking as Scrum Master, keeping engineering unblocked within sprint cycles.",
+  },
+  {
+    value: "25%",
+    label: "Onboarding Time Cut",
+    desc: "PayContactless SoftPOS onboarding workflow redesign — measured against the pre-redesign baseline.",
+  },
+  {
+    value: "2,000+",
+    label: "Learners Mentored",
+    desc: "PM curriculum and 1:1 mentorship reaching aspiring product managers globally through BeTechified.",
+  },
 ];
 
 const MetricsSection = () => {
@@ -15,32 +30,43 @@ const MetricsSection = () => {
 
   return (
     <section className="section-padding" ref={ref}>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 mb-14"
         >
-          <p className="text-primary font-mono text-sm mb-3 tracking-wider">// IMPACT</p>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Metrics that <span className="text-gradient">matter</span>
-          </h2>
+          <div className="md:col-span-4">
+            <p className="editorial-eyebrow mb-6">Impact</p>
+            <h2 className="font-serif text-4xl md:text-5xl leading-[1.05]">
+              Numbers with<br />
+              <span className="italic text-primary">receipts.</span>
+            </h2>
+          </div>
+          <div className="md:col-span-8">
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
+              Every figure below is anchored to a specific initiative, timeframe, and company — not a résumé metric floating without context.
+            </p>
+          </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
           {metrics.map((m, i) => (
             <motion.div
               key={m.label}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.4, delay: 0.1 * i }}
-              className="glass rounded-xl p-6 text-center hover:border-primary/30 transition-all group"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.08 * i }}
+              className="bg-background p-8 md:p-10"
             >
-              <m.icon className="w-6 h-6 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-              <p className="text-3xl md:text-4xl font-bold text-gradient mb-1">{m.value}</p>
-              <p className="font-semibold text-sm mb-1">{m.label}</p>
-              <p className="text-xs text-muted-foreground">{m.desc}</p>
+              <p className="font-serif italic text-6xl md:text-7xl text-primary leading-none mb-4">
+                {m.value}
+              </p>
+              <p className="text-[11px] uppercase tracking-[0.2em] text-foreground mb-3">
+                {m.label}
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
             </motion.div>
           ))}
         </div>
