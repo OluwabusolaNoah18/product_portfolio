@@ -1,23 +1,23 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ArrowUpRight, Banknote, Network } from "lucide-react";
 
 type Section = { heading: string; body?: string; bullets?: string[] };
 
 type Project = {
-  icon: typeof Banknote;
   title: string;
   meta: string;
+  scope?: string;
   tags: string[];
   sections: Section[];
   whyItMatters: string;
+  footnote?: string;
 };
 
 const projects: Project[] = [
   {
-    icon: Banknote,
-    title: "Expanding Payment Options with \"Pay with Transfer\"",
-    meta: "Product Manager · New Product Feature / Ecosystem Expansion",
+    title: "Expanding Payment Options with Pay with Transfer",
+    meta: "Product Manager · New Product Feature / Ecosystem Expansion · Prophius LTD",
+    scope: "~11–12 months, delivered in four phases · Cross-functional team spanning Product, Backend, Frontend, QA, and Operations",
     tags: ["Payment Channels", "Virtual Accounts", "Bank Partnerships", "Ops Tooling"],
     sections: [
       {
@@ -28,24 +28,24 @@ const projects: Project[] = [
       {
         heading: "Goal",
         body:
-          "Introduce a reliable \"Pay with Transfer\" option across web, gateway, and POS without disrupting existing card flows, while giving internal teams the tools to monitor and manage transfer transactions.",
+          "Introduce a reliable Pay with Transfer option across web, gateway, and POS without disrupting existing card flows, while giving internal teams the tools to monitor and manage transfer transactions.",
       },
       {
         heading: "What I Analyzed",
         bullets: [
           "Customer payment behavior, transaction data and support tickets showing rising preference for transfers",
-          "Competitor offerings, how other fintechs structured transfer/virtual account products",
+          "Competitor offerings, how other fintechs structured transfer/virtual account products, plus APM research into PalmPay, OPay, and InTouch",
           "Internal technical readiness, no virtual account support, no monitoring dashboard",
           "Partnership landscape, banks/MFIs that could issue static and dynamic virtual accounts at scale",
         ],
       },
       {
-        heading: "Proposed Solution",
+        heading: "Proposed Solution & Phased Delivery",
         bullets: [
-          "Multi-channel enablement across e-commerce/web, payment gateway, and POS devices",
-          "Virtual account infrastructure, partnered with banks and MFIs to issue static (merchant-specific) and dynamic (transaction-specific) virtual accounts",
-          "Internal tooling, a virtual account management dashboard for ops to track, reconcile, and monitor transfer transactions",
-          "Phased rollout, gateway/web first, POS following once reconciliation was validated",
+          "Phase 1 — Virtual Account Dashboard (~8 months): ops tooling for individual and bulk virtual account creation, and static account assignment to merchants",
+          "Phase 2 — Virtual Account Provider Integration (~2–3 months): connected the Pay with Transfer flow to the provider for static and dynamic account issuance",
+          "Phase 3 — Wallet Implementation (~3 months): merchants can view incoming transactions and withdraw to their settlement account across POS, SoftPOS, and the Merchant Portal, with admin-side visibility into wallet activity",
+          "Phase 4 — Instant Settlement (~1 month): closed the loop so merchants could access funds without delay",
         ],
       },
       {
@@ -58,8 +58,14 @@ const projects: Project[] = [
         ],
       },
       {
+        heading: "What I Learned Along the Way",
+        body:
+          "The initial MVP scope focused on getting transfer payments accepted end-to-end. Once it shipped and merchants started using it in production, real usage surfaced a gap the upfront analysis hadn't fully captured: merchants needed native visibility into incoming transfers and a way to withdraw funds to their settlement account, not just the ability to accept a payment. That became the Wallet phase. It reinforced a principle I now build into every rollout: ship the smallest usable version fast, watch how it's actually used, and treat the fast-follow as part of the plan rather than a sign something was missed.",
+      },
+      {
         heading: "Impact",
         bullets: [
+          "Merchant base grew 32.5% in 17 months following the onboarding and payment-flow improvements (52 new merchants against a total base of 160 built over 7 years)",
           "Expanded the payment ecosystem beyond cards with a faster, more accessible option",
           "Strengthened competitive positioning against transfer-native fintechs",
           "Gave ops real-time visibility and control over transfer transactions for the first time",
@@ -69,11 +75,12 @@ const projects: Project[] = [
     ],
     whyItMatters:
       "Demonstrates market awareness (spotting a shift in payment behavior early), product thinking beyond the feature (enabling transfers required new infrastructure and tooling, not just a UI toggle), cross-functional execution across external partners and internal teams, and clear business impact.",
+    footnote:
+      "PayContactless — one of the products this work supported — is live on the Google Play Store as a public Android app.",
   },
   {
-    icon: Network,
     title: "MID Management & Payment Orchestration Platform",
-    meta: "Product Manager (PRD ownership) · Core Infrastructure / Platform Capability · Shipped & Live",
+    meta: "Product Manager (PRD ownership) · Core Infrastructure / Platform Capability · Prophius LTD · Shipped & Live",
     tags: ["Payment Orchestration", "MID Routing", "Failover", "PCI-DSS", "Platform"],
     sections: [
       {
@@ -132,6 +139,45 @@ const projects: Project[] = [
     whyItMatters:
       "Demonstrates systems-level product thinking (a platform capability spanning compliance, infrastructure, and operations), translating ambiguous business goals into buildable specs, proactive risk and compliance awareness, technical fluency with engineering on architecture tradeoffs, and ownership through delivery.",
   },
+  {
+    title: "Merchant Onboarding & Portal Growth",
+    meta: "Product Manager · Conversion / UX Optimization · Prophius LTD",
+    tags: ["Merchant Onboarding", "Portal UX", "Conversion Optimization"],
+    sections: [
+      {
+        heading: "Problem",
+        body:
+          "Merchant onboarding on the Prophius portal ran through a long, multi-step creation flow. The friction wasn't just a UX annoyance, it was a direct constraint on how fast the merchant base could grow, since every new merchant had to get through that flow before they could start processing.",
+      },
+      {
+        heading: "Goal",
+        body:
+          "Simplify merchant creation on the portal to reduce friction and drive faster merchant activation, without compromising the KYC/verification steps the flow existed to enforce.",
+      },
+      {
+        heading: "What I Analyzed",
+        bullets: [
+          "Existing flow structure, identifying which steps were essential vs. redundant",
+          "Where in the flow merchants were most likely to stall or abandon",
+          "Compliance and KYC requirements that had to stay intact regardless of simplification",
+        ],
+      },
+      {
+        heading: "Solution",
+        body:
+          "Redesigned the merchant creation flow to cut unnecessary steps while preserving verification requirements. The same approach is currently being extended to the SoftPOS mobile onboarding flow to capture the same gains for mobile-acquired merchants.",
+      },
+      {
+        heading: "Impact",
+        bullets: [
+          "Merchant base grew 32.5% in 17 months (52 new merchants against a total base of 160 built over the company's full 7-year history)",
+          "Cleared a real growth constraint by reducing time-to-activate at the point of highest drop-off",
+        ],
+      },
+    ],
+    whyItMatters:
+      "Shows a different register of product work from the other two case studies — growth-and-conversion thinking, not just infrastructure scoping. Demonstrates the ability to move a business metric (merchant base size) through a UX-level intervention, not just a technical build.",
+  },
 ];
 
 const ProjectsSection = () => {
@@ -140,46 +186,56 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="section-padding" ref={ref}>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 mb-20"
         >
-          <p className="text-primary font-mono text-sm mb-3 tracking-wider">// FEATURED CASE STUDIES</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Product wins & <span className="text-gradient">impact</span>
-          </h2>
-          <p className="text-muted-foreground max-w-3xl mb-12 leading-relaxed">
-            Two major product wins from my time as a Product Manager on a fintech platform spanning POS
-            terminal management, merchant onboarding, and payment processing, from spotting the gap to
-            shipping the live product.
-          </p>
+          <div className="md:col-span-4">
+            <p className="editorial-eyebrow mb-6">Selected Case Studies</p>
+            <h2 className="font-serif text-4xl md:text-5xl leading-[1.05]">
+              Product wins,<br />
+              <span className="italic text-primary">from gap to live.</span>
+            </h2>
+          </div>
+          <div className="md:col-span-8">
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
+              Three case studies from my time as a Product Manager on a fintech platform spanning POS terminal management, merchant onboarding, and payment processing — from spotting the gap to shipping the live product.
+            </p>
+          </div>
         </motion.div>
 
-        <div className="space-y-10">
+        <div className="space-y-24 md:space-y-32">
           {projects.map((project, i) => (
-            <motion.div
+            <motion.article
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="glass rounded-2xl p-6 md:p-10 hover:border-primary/30 transition-all group"
+              transition={{ duration: 0.5, delay: 0.05 * i }}
+              className="border-t border-border pt-12"
             >
-              <div className="flex items-start gap-4 mb-8">
-                <div className="p-3 rounded-xl bg-primary/10 text-primary shrink-0">
-                  <project.icon className="w-6 h-6" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-xs font-mono text-muted-foreground mb-1">Case Study {i + 1}</p>
-                  <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors flex items-start gap-2">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-12">
+                <div className="md:col-span-4">
+                  <p className="editorial-eyebrow mb-4">Case Study 0{i + 1}</p>
+                  <h3 className="font-serif text-3xl md:text-4xl leading-[1.1] mb-4">
                     {project.title}
-                    <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity shrink-0 mt-1" />
                   </h3>
-                  <p className="text-sm text-muted-foreground mt-1">{project.meta}</p>
-                  <div className="flex flex-wrap gap-2 mt-3">
+                </div>
+                <div className="md:col-span-8 space-y-4">
+                  <p className="text-sm text-muted-foreground">{project.meta}</p>
+                  {project.scope && (
+                    <p className="text-[11px] uppercase tracking-[0.2em] text-primary">
+                      {project.scope}
+                    </p>
+                  )}
+                  <div className="flex flex-wrap gap-2 pt-2">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="text-xs font-mono px-2 py-1 rounded-md bg-secondary text-muted-foreground">
+                      <span
+                        key={tag}
+                        className="text-[10px] uppercase tracking-[0.2em] border border-border px-3 py-1.5 text-muted-foreground"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -187,21 +243,24 @@ const ProjectsSection = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                 {project.sections.map((s) => (
                   <div key={s.heading}>
-                    <h4 className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">
-                      {s.heading}
-                    </h4>
+                    <h4 className="editorial-eyebrow mb-4">{s.heading}</h4>
                     {s.body && (
-                      <p className="text-sm text-muted-foreground leading-relaxed">{s.body}</p>
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                        {s.body}
+                      </p>
                     )}
                     {s.bullets && (
-                      <ul className="space-y-1.5">
+                      <ul className="space-y-2.5">
                         {s.bullets.map((b) => (
-                          <li key={b} className="text-sm text-muted-foreground flex items-start gap-2 leading-relaxed">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                            {b}
+                          <li
+                            key={b}
+                            className="text-sm md:text-base text-muted-foreground flex items-start gap-3 leading-relaxed"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
+                            <span>{b}</span>
                           </li>
                         ))}
                       </ul>
@@ -210,13 +269,22 @@ const ProjectsSection = () => {
                 ))}
               </div>
 
-              <div className="mt-8 pt-6 border-t border-border/50">
-                <h4 className="text-sm font-semibold text-accent mb-2 uppercase tracking-wider">
-                  Why This Matters
-                </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{project.whyItMatters}</p>
+              <div className="mt-12 pt-10 border-t border-border grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div className="md:col-span-4">
+                  <h4 className="editorial-eyebrow text-accent">Why This Matters</h4>
+                </div>
+                <div className="md:col-span-8">
+                  <p className="font-serif italic text-xl md:text-2xl leading-snug text-foreground/90">
+                    {project.whyItMatters}
+                  </p>
+                  {project.footnote && (
+                    <p className="mt-6 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                      Note — {project.footnote}
+                    </p>
+                  )}
+                </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

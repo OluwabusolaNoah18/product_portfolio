@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Linkedin, Send, Download } from "lucide-react";
+import { Linkedin, Send, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -20,83 +20,84 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="section-padding" ref={ref}>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 mb-16"
         >
-          <p className="text-primary font-mono text-sm mb-3 tracking-wider">// GET IN TOUCH</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Let's build something <span className="text-gradient">great</span>
-          </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">
-            Open to product leadership roles in fintech, payments, and platform companies.
-          </p>
+          <div className="md:col-span-6">
+            <p className="editorial-eyebrow mb-6">Contact</p>
+            <h2 className="font-serif text-5xl md:text-7xl leading-[0.95]">
+              Let's discuss the<br />
+              <span className="italic text-primary">next hypothesis.</span>
+            </h2>
+          </div>
+          <div className="md:col-span-6 flex items-end">
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
+              Open to product leadership roles in fintech, payments, and platform companies — full-time, contract, or advisory.
+            </p>
+          </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Contact Info */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 border-t border-border pt-16">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="space-y-6"
+            className="md:col-span-5 space-y-8"
           >
-            <a
-              href="mailto:oluwabusola.ruth@gmail.com"
-              className="glass rounded-xl p-5 flex items-center gap-4 hover:border-primary/30 transition-colors group block"
-            >
-              <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:scale-110 transition-transform">
-                <Mail className="w-5 h-5" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Email</p>
-                <p className="font-medium">noaholuwabusola3@gmail.com</p>
-              </div>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/oluwabusola-noah"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass rounded-xl p-5 flex items-center gap-4 hover:border-primary/30 transition-colors group block"
-            >
-              <div className="p-3 rounded-xl bg-accent/10 text-accent group-hover:scale-110 transition-transform">
-                <Linkedin className="w-5 h-5" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">LinkedIn</p>
-                <p className="font-medium">Connect with me</p>
-              </div>
-            </a>
-
-            <Button asChild variant="outline" className="w-full py-6 rounded-xl border-border hover:bg-secondary">
+            <div>
+              <p className="editorial-eyebrow mb-3">Email</p>
               <a
-                href="https://drive.google.com/file/d/1Ub7p3o1Osg08Go2RxAZJaqpEBje8k6pF/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:noaholuwabusola3@gmail.com"
+                className="font-serif text-2xl md:text-3xl italic text-foreground hover:text-primary transition-colors break-all"
               >
-                <Download className="mr-2 w-4 h-4" />
-                View Resume
+                noaholuwabusola3@gmail.com
               </a>
-            </Button>
+            </div>
+            <div>
+              <p className="editorial-eyebrow mb-3">Elsewhere</p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://www.linkedin.com/in/oluwabusola-noah"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-foreground hover:text-primary transition-colors group"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span className="text-sm">LinkedIn</span>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground group-hover:text-primary">
+                    /in/oluwabusola-noah
+                  </span>
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1Ub7p3o1Osg08Go2RxAZJaqpEBje8k6pF/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-foreground hover:text-primary transition-colors"
+                >
+                  <Download className="w-4 h-4" />
+                  <span className="text-sm">Résumé (PDF)</span>
+                </a>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.form
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.4, delay: 0.2 }}
             onSubmit={handleSubmit}
-            className="glass rounded-xl p-6 space-y-4"
+            className="md:col-span-7 space-y-6"
           >
+            <p className="editorial-eyebrow">Send a message</p>
             <Input
               placeholder="Your name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="bg-secondary border-border focus:border-primary rounded-lg"
+              className="bg-transparent border-0 border-b border-border rounded-none px-0 h-12 text-base focus-visible:ring-0 focus-visible:border-primary"
               required
             />
             <Input
@@ -104,19 +105,22 @@ const ContactSection = () => {
               placeholder="Your email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="bg-secondary border-border focus:border-primary rounded-lg"
+              className="bg-transparent border-0 border-b border-border rounded-none px-0 h-12 text-base focus-visible:ring-0 focus-visible:border-primary"
               required
             />
             <Textarea
               placeholder="Your message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="bg-secondary border-border focus:border-primary rounded-lg min-h-[120px]"
+              className="bg-transparent border-0 border-b border-border rounded-none px-0 min-h-[120px] text-base focus-visible:ring-0 focus-visible:border-primary resize-none"
               required
             />
-            <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-5 rounded-xl">
-              <Send className="mr-2 w-4 h-4" />
+            <Button
+              type="submit"
+              className="group bg-primary text-primary-foreground hover:bg-accent px-8 py-6 text-[11px] uppercase tracking-[0.2em] rounded-none"
+            >
               Send Message
+              <Send className="ml-3 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </motion.form>
         </div>
