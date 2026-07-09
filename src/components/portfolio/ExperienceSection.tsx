@@ -5,6 +5,7 @@ const experiences = [
   {
     company: "Prophius LTD",
     role: "Product Manager / Scrum Master",
+    type: "Full-time",
     period: "Feb 2025 – Present",
     location: "Lagos, Nigeria",
     description:
@@ -13,7 +14,8 @@ const experiences = [
   },
   {
     company: "Filton Avenue",
-    role: "Product Owner (Contract), Fintech FX Platform",
+    role: "Product Owner, Fintech FX Platform",
+    type: "Contract · 1-month fixed-scope",
     period: "May 2026 – Jun 2026",
     location: "United Kingdom",
     description:
@@ -21,7 +23,8 @@ const experiences = [
   },
   {
     company: "MyPropifyNG",
-    role: "Lead Product Manager (Contract)",
+    role: "Lead Product Manager",
+    type: "Contract",
     period: "Sep 2025 – May 2026",
     location: "Lagos, Nigeria",
     description:
@@ -30,18 +33,29 @@ const experiences = [
   {
     company: "BeTechified",
     role: "Product Mentor",
+    type: "Volunteer",
     period: "Apr 2025 – Oct 2025",
     location: "Lagos, Nigeria",
     description:
       "Mentored 1,000+ aspiring product managers through 1:1 sessions and workshops. Introduced new PM courses reaching 2,000+ learners globally, and reviewed mentees' PRDs and product flows to raise documentation quality.",
   },
   {
+    company: "iTCloser",
+    role: "Product Manager",
+    type: "Contract · 3 months",
+    period: "2024",
+    location: "Remote",
+    description:
+      "Ran a structured A/B comparison between two design directions with the team to determine which delivered a stronger user experience before committing to build — the origin of the experimentation-first practice I still use.",
+  },
+  {
     company: "Young People in Tech (YPIT)",
-    role: "Program Manager, Hackathon & Conference (Volunteer)",
+    role: "Program Manager, Hackathon & Conference",
+    type: "Volunteer",
     period: "Oct 2025 – Present",
     location: "Remote",
     description:
-      "Leading planning and execution of the YPIT Artificial Future Hackathon, onboarding, community engagement, event ops, and stakeholder coordination across virtual and in-person attendees.",
+      "Leading planning and execution of the YPIT Artificial Future Hackathon — onboarding, community engagement, event ops, and stakeholder coordination across virtual and in-person attendees.",
   },
 ];
 
@@ -50,51 +64,66 @@ const ExperienceSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="section-padding" ref={ref}>
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="section-padding bg-card/40 border-y border-border" ref={ref}>
+      <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 mb-16"
         >
-          <p className="text-primary font-mono text-sm mb-3 tracking-wider">// EXPERIENCE</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Career <span className="text-gradient">timeline</span>
-          </h2>
+          <div className="md:col-span-4">
+            <p className="editorial-eyebrow mb-6">Ledger</p>
+            <h2 className="font-serif text-4xl md:text-5xl leading-[1.05]">
+              A career,<br />
+              <span className="italic text-primary">entry by entry.</span>
+            </h2>
+          </div>
+          <div className="md:col-span-8">
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
+              Full-time roles, contracts, and volunteer work — labeled honestly so the picture stays consistent with my resume.
+            </p>
+          </div>
         </motion.div>
 
-        <div className="relative">
-          <div className="absolute left-4 md:left-6 top-0 bottom-0 w-px bg-border" />
-
-          <div className="space-y-8">
-            {experiences.map((exp, i) => (
-              <motion.div
-                key={exp.company + exp.period}
-                initial={{ opacity: 0, x: -20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.4, delay: 0.1 * i }}
-                className="relative pl-12 md:pl-16"
-              >
-                <div className={`absolute left-2.5 md:left-4.5 top-1.5 w-3 h-3 rounded-full border-2 ${
-                  exp.current ? "bg-primary border-primary animate-pulse-glow" : "bg-background border-muted-foreground/30"
-                }`} />
-
-                <div className="glass rounded-xl p-5 hover:border-primary/30 transition-colors">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-2">
-                    <h3 className="font-bold text-lg">{exp.company}</h3>
-                    <span className={`text-xs font-mono px-2 py-1 rounded-md w-fit ${
-                      exp.current ? "bg-primary/10 text-primary" : "bg-secondary text-muted-foreground"
-                    }`}>
-                      {exp.period}
-                    </span>
-                  </div>
-                  <p className="text-primary text-sm font-medium">{exp.role}</p>
-                  <p className="text-xs text-muted-foreground mb-2">{exp.location}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{exp.description}</p>
+        <div className="border-t border-border">
+          {experiences.map((exp, i) => (
+            <motion.article
+              key={exp.company + exp.period}
+              initial={{ opacity: 0, y: 15 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.05 * i }}
+              className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 py-10 md:py-12 border-b border-border group"
+            >
+              <div className="md:col-span-3">
+                <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                  {exp.period}
+                </p>
+                <p className="text-[10px] uppercase tracking-[0.25em] mt-2 text-primary">
+                  {exp.type}
+                </p>
+                {exp.current && (
+                  <span className="inline-flex items-center gap-2 mt-3 text-[10px] uppercase tracking-[0.2em] text-accent">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" /> Current
+                  </span>
+                )}
+              </div>
+              <div className="md:col-span-9">
+                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
+                  <h3 className="font-serif text-2xl md:text-3xl group-hover:text-primary transition-colors">
+                    {exp.company}
+                  </h3>
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                    {exp.location}
+                  </p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+                <p className="text-primary text-sm mb-4 italic font-serif">{exp.role}</p>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-3xl">
+                  {exp.description}
+                </p>
+              </div>
+            </motion.article>
+          ))}
         </div>
       </div>
     </section>
