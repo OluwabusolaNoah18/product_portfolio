@@ -42,7 +42,7 @@ const SkillsSection = () => {
           </div>
           <div className="md:col-span-8">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
-              A working inventory of what I bring to a product team — spanning discovery, delivery, and the fintech-specific muscle needed to ship payment infrastructure.
+              A working inventory of what I bring to a product team spanning discovery, delivery, and the fintech-specific muscle needed to ship payment infrastructure.
             </p>
           </div>
         </motion.div>

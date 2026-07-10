@@ -42,10 +42,10 @@ const projects: Project[] = [
       {
         heading: "Proposed Solution & Phased Delivery",
         bullets: [
-          "Phase 1 — Virtual Account Dashboard (~8 months): ops tooling for individual and bulk virtual account creation, and static account assignment to merchants",
-          "Phase 2 — Virtual Account Provider Integration (~2–3 months): connected the Pay with Transfer flow to the provider for static and dynamic account issuance",
-          "Phase 3 — Wallet Implementation (~3 months): merchants can view incoming transactions and withdraw to their settlement account across POS, SoftPOS, and the Merchant Portal, with admin-side visibility into wallet activity",
-          "Phase 4 — Instant Settlement (~1 month): closed the loop so merchants could access funds without delay",
+          "Phase 1 Virtual Account Dashboard (~8 months): ops tooling for individual and bulk virtual account creation, and static account assignment to merchants",
+          "Phase 2 Virtual Account Provider Integration (~2–3 months): connected the Pay with Transfer flow to the provider for static and dynamic account issuance",
+          "Phase 3 Wallet Implementation (~3 months): merchants can view incoming transactions and withdraw to their settlement account across POS, SoftPOS, and the Merchant Portal, with admin-side visibility into wallet activity",
+          "Phase 4 Instant Settlement (~1 month): closed the loop so merchants could access funds without delay",
         ],
       },
       {
@@ -76,7 +76,7 @@ const projects: Project[] = [
     whyItMatters:
       "Demonstrates market awareness (spotting a shift in payment behavior early), product thinking beyond the feature (enabling transfers required new infrastructure and tooling, not just a UI toggle), cross-functional execution across external partners and internal teams, and clear business impact.",
     footnote:
-      "PayContactless — one of the products this work supported — is live on the Google Play Store as a public Android app.",
+      "PayContactless one of the products this work supported is live on the Google Play Store as a public Android app.",
   },
   {
     title: "MID Management & Payment Orchestration Platform",
@@ -176,7 +176,7 @@ const projects: Project[] = [
       },
     ],
     whyItMatters:
-      "Shows a different register of product work from the other two case studies — growth-and-conversion thinking, not just infrastructure scoping. Demonstrates the ability to move a business metric (merchant base size) through a UX-level intervention, not just a technical build.",
+      "Shows a different register of product work from the other two case studies growth-and-conversion thinking, not just infrastructure scoping. Demonstrates the ability to move a business metric (merchant base size) through a UX-level intervention, not just a technical build.",
   },
 ];
 
@@ -279,7 +279,7 @@ const ProjectsSection = () => {
                   </p>
                   {project.footnote && (
                     <p className="mt-6 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                      Note — {project.footnote}
+                      Note {project.footnote}
                     </p>
                   )}
                 </div>

@@ -22,7 +22,7 @@ const HeroSection = () => {
           </div>
           <div className="md:text-right md:max-w-xs">
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Oluwabusola Noah Ruth — Product Manager building products that ship, scale, and users love.
+              Oluwabusola Noah Ruth Product Manager building products that ship, scale, and users love.
             </p>
           </div>
         </motion.header>
@@ -37,7 +37,7 @@ const HeroSection = () => {
           >
             <h2 className="font-serif text-3xl md:text-5xl leading-[1.08] mb-10 max-w-3xl">
               I build at the intersection of{" "}
-              <span className="text-accent italic">technical rigor</span> and user intuition — turning ambiguous fintech problems into shipped, live infrastructure.
+              <span className="text-accent italic">technical rigor</span> and user intuition turning ambiguous fintech problems into shipped, live infrastructure.
             </h2>
 
             <div className="flex flex-wrap gap-10">

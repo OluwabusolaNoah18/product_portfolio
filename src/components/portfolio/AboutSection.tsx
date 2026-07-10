@@ -4,7 +4,7 @@ import { useRef } from "react";
 const chapters = [
   {
     label: "Design",
-    body: "Started in tech as a Product Designer — trained me to obsess over the user's mental model before touching the solution.",
+    body: "Started in tech as a Product Designer trained me to obsess over the user's mental model before touching the solution.",
   },
   {
     label: "Product",
@@ -16,7 +16,7 @@ const chapters = [
   },
   {
     label: "Research",
-    body: "Background in biochemistry research — the same hypothesis-test-evidence loop now shapes how I scope product bets.",
+    body: "Background in biochemistry research the same hypothesis-test-evidence loop now shapes how I scope product bets.",
   },
 ];
 
@@ -42,10 +42,10 @@ const AboutSection = () => {
           </div>
           <div className="md:col-span-8 space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed">
             <p>
-              I'm a Product Manager and Certified Scrum Master with deep expertise in fintech, payment systems, and platform products. My path here wasn't linear — I started my tech career as a Product Designer, transitioned into Product Management, and later completed coursework in QA Engineering so I could properly validate a product before it ships (I still lead UAT and regression testing today).
+              I'm a Product Manager and Certified Scrum Master with deep expertise in fintech, payment systems, and platform products. My path here wasn't linear I started my tech career as a Product Designer, transitioned into Product Management, and later completed coursework in QA Engineering so I could properly validate a product before it ships (I still lead UAT and regression testing today).
             </p>
             <p>
-              Underneath it all is my background in biochemistry research: the same instinct that trained me to form a hypothesis, test it, and let evidence — not assumption — decide the next step now shows up in how I scope and validate product decisions.
+              Underneath it all is my background in biochemistry research: the same instinct that trained me to form a hypothesis, test it, and let evidence not assumption decide the next step now shows up in how I scope and validate product decisions.
             </p>
             <p>
               I specialize in building scalable payment gateways, embedded finance solutions, and API-first products that drive measurable business impact. My approach combines data-driven decision making with agile methodologies to deliver products that users love and businesses rely on.

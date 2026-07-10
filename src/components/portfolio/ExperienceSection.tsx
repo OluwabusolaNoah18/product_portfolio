@@ -46,7 +46,7 @@ const experiences = [
     period: "Dec 2025 – Feb 2026",
     location: "Remote",
     description:
-      "Ran a structured A/B comparison between two design directions with the team to determine which delivered a stronger user experience before committing to build — the origin of the experimentation-first practice I still use.",
+      "Ran a structured A/B comparison between two design directions with the team to determine which delivered a stronger user experience before committing to build the origin of the experimentation-first practice I still use.",
   },
   {
     company: "Young People in Tech (YPIT)",
@@ -55,7 +55,7 @@ const experiences = [
     period: "Oct 2025 – Present",
     location: "Remote",
     description:
-      "Led the planning and execution of the YPIT Artificial Future Hackathon and Conference 2026 — onboarding, community engagement, event ops, and stakeholder coordination across virtual and in-person attendees.",
+      "Led the planning and execution of the YPIT Artificial Future Hackathon and Conference 2026 onboarding, community engagement, event ops, and stakeholder coordination across virtual and in-person attendees.",
   },
 ];
 
@@ -81,7 +81,7 @@ const ExperienceSection = () => {
           </div>
           <div className="md:col-span-8">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
-              Full-time roles, contracts, and volunteer work — labeled honestly so the picture stays consistent with my resume.
+              Full-time roles, contracts, and volunteer work labeled honestly so the picture stays consistent with my resume.
             </p>
           </div>
         </motion.div>
