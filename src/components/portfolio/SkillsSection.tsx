@@ -8,7 +8,7 @@ const skillCategories = [
   },
   {
     title: "FinTech & Technical",
-    skills: ["Payment Systems", "API Design", "Alternative Payment Methods (APM) Integration", "Embedded Finance", "SoftPOS", "KYC/AML"],
+    skills: ["Payment Systems", "Alternative Payment Methods (APM) Integration", "Embedded Finance", "SoftPOS", "KYC/AML"],
   },
   {
     title: "Agile & Delivery",
@@ -16,7 +16,7 @@ const skillCategories = [
   },
   {
     title: "Tools & Platforms",
-    skills: ["Jira", "Figma", "Notion", "Miro", "Confluence", "Mixpanel", "Google Analytics", "Postman", "Slack"],
+    skills: ["Jira", "Figma", "Notion", "Miro", "Mobbin", "Stitch", "Claude", "Confluence", "Mixpanel", "Google Analytics", "Postman", "Slack"],
   },
 ];
 
