@@ -5,7 +5,7 @@ const metrics = [
   {
     value: "32.5%",
     label: "Merchant Base Growth",
-    desc: "52 new merchants added in 17 months against a total base of 160 built over 7 years — via the onboarding flow redesign and Pay with Transfer rollout at Prophius.",
+    desc: "Delivered via the onboarding flow redesign and Pay with Transfer rollout at Prophius.",
   },
   {
     value: "40%",
