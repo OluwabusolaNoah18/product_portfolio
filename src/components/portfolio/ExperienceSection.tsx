@@ -43,7 +43,7 @@ const experiences = [
     company: "iTCloser",
     role: "Product Manager",
     type: "Contract · 3 months",
-    period: "2024",
+    period: "Dec 2025 – Feb 2026",
     location: "Remote",
     description:
       "Ran a structured A/B comparison between two design directions with the team to determine which delivered a stronger user experience before committing to build — the origin of the experimentation-first practice I still use.",
@@ -55,7 +55,7 @@ const experiences = [
     period: "Oct 2025 – Present",
     location: "Remote",
     description:
-      "Leading planning and execution of the YPIT Artificial Future Hackathon — onboarding, community engagement, event ops, and stakeholder coordination across virtual and in-person attendees.",
+      "Led the planning and execution of the YPIT Artificial Future Hackathon and Conference 2026 — onboarding, community engagement, event ops, and stakeholder coordination across virtual and in-person attendees.",
   },
 ];
 

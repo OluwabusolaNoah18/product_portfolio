@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, Download } from "lucide-react";
 
-const CV_URL = "https://drive.google.com/file/d/1Ub7p3o1Osg08Go2RxAZJaqpEBje8k6pF/view?usp=sharing";
+const CV_URL = "https://drive.google.com/file/d/1ocDuxu-2kcxNvZtrjkEhbGY_iHiuR01E/view?usp=drive_link";
 
 const HeroSection = () => {
   return (
@@ -22,7 +22,7 @@ const HeroSection = () => {
           </div>
           <div className="md:text-right md:max-w-xs">
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Oluwabusola Noah Ruth — building payment gateways, embedded finance, and API-first products merchants and engineers can rely on.
+              Oluwabusola Noah Ruth — Product Manager building products that ship, scale, and users love.
             </p>
           </div>
         </motion.header>

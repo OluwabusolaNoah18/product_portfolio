@@ -65,7 +65,7 @@ const projects: Project[] = [
       {
         heading: "Impact",
         bullets: [
-          "Merchant base grew 32.5% in 17 months following the onboarding and payment-flow improvements (52 new merchants against a total base of 160 built over 7 years)",
+          "Merchant base grew 32.5% in 17 months following the onboarding and payment-flow improvements",
           "Expanded the payment ecosystem beyond cards with a faster, more accessible option",
           "Strengthened competitive positioning against transfer-native fintechs",
           "Gave ops real-time visibility and control over transfer transactions for the first time",
@@ -170,7 +170,7 @@ const projects: Project[] = [
       {
         heading: "Impact",
         bullets: [
-          "Merchant base grew 32.5% in 17 months (52 new merchants against a total base of 160 built over the company's full 7-year history)",
+          "Merchant base grew 32.5% in 17 months",
           "Cleared a real growth constraint by reducing time-to-activate at the point of highest drop-off",
         ],
       },
@@ -202,7 +202,7 @@ const ProjectsSection = () => {
           </div>
           <div className="md:col-span-8">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
-              Three case studies from my time as a Product Manager on a fintech platform spanning POS terminal management, merchant onboarding, and payment processing — from spotting the gap to shipping the live product.
+              Three case studies from my time as a Product Manager on a fintech platform spanning Payment Channel Expansion, Merchant Onboarding Processing, and Seamless payment processing and transaction routing.
             </p>
           </div>
         </motion.div>

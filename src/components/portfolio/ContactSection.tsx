@@ -36,7 +36,7 @@ const ContactSection = () => {
           </div>
           <div className="md:col-span-6 flex items-end">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
-              Open to product leadership roles in fintech, payments, and platform companies — full-time, contract, or advisory.
+              Open to Mid-level Product Management, APM, and leadership roles in fintech and Healthtech — full-time, contract, or advisory.
             </p>
           </div>
         </motion.div>
@@ -73,7 +73,7 @@ const ContactSection = () => {
                   </span>
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1Ub7p3o1Osg08Go2RxAZJaqpEBje8k6pF/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1ocDuxu-2kcxNvZtrjkEhbGY_iHiuR01E/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-foreground hover:text-primary transition-colors"
