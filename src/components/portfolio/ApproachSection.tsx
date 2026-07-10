@@ -44,7 +44,7 @@ const ApproachSection = () => {
           </div>
           <div className="md:col-span-8">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
-              Every product bet gets treated like a hypothesis — scoped small enough to test, validated with real evidence, and expanded only when the data earns it. Below are three examples of that muscle in practice, each tied to the company where it happened.
+              Every product bet gets treated like a hypothesis scoped small enough to test, validated with real evidence, and expanded only when the data earns it. Below are three examples of that muscle in practice, each tied to the company where it happened.
             </p>
           </div>
         </motion.div>

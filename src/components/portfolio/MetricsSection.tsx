@@ -15,7 +15,7 @@ const metrics = [
   {
     value: "25%",
     label: "Onboarding Time Cut",
-    desc: "PayContactless SoftPOS onboarding workflow redesign — measured against the pre-redesign baseline.",
+    desc: "PayContactless SoftPOS onboarding workflow redesign measured against the pre-redesign baseline.",
   },
   {
     value: "2,000+",
@@ -46,7 +46,7 @@ const MetricsSection = () => {
           </div>
           <div className="md:col-span-8">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
-              Every figure below is anchored to a specific initiative, timeframe, and company — not a résumé metric floating without context.
+              Every figure below is anchored to a specific initiative, timeframe, and company not a résumé metric floating without context.
             </p>
           </div>
         </motion.div>
