@@ -112,7 +112,6 @@ const ProjectsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((p, i) => {
             const style = accentStyles[p.accent];
-            const isOpen = open === p.number;
             return (
               <motion.button
                 key={p.number}
