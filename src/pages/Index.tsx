@@ -1,9 +1,11 @@
 import Navbar from "@/components/portfolio/Navbar";
 import HeroSection from "@/components/portfolio/HeroSection";
-import IntroSection from "@/components/portfolio/IntroSection";
-import ProjectsSection from "@/components/portfolio/ProjectsSection";
+import AboutSection from "@/components/portfolio/AboutSection";
+import ApproachSection from "@/components/portfolio/ApproachSection";
 import SkillsSection from "@/components/portfolio/SkillsSection";
-import CurrentRoleSection from "@/components/portfolio/CurrentRoleSection";
+import ProjectsSection from "@/components/portfolio/ProjectsSection";
+import ExperienceSection from "@/components/portfolio/ExperienceSection";
+import MetricsSection from "@/components/portfolio/MetricsSection";
 import ContactSection from "@/components/portfolio/ContactSection";
 import Footer from "@/components/portfolio/Footer";
 
@@ -12,10 +14,12 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <HeroSection />
-      <IntroSection />
-      <ProjectsSection />
+      <AboutSection />
+      <ApproachSection />
       <SkillsSection />
-      <CurrentRoleSection />
+      <ProjectsSection />
+      <ExperienceSection />
+      <MetricsSection />
       <ContactSection />
       <Footer />
     </div>
