@@ -20,11 +20,6 @@ const HeroSection = () => {
               Fintech<br />Product Manager
             </h1>
           </div>
-          <div className="md:text-right md:max-w-xs">
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Oluwabusola Noah Ruth Product Manager building products that ship, scale, and users love.
-            </p>
-          </div>
         </motion.header>
 
         {/* Body grid */}
