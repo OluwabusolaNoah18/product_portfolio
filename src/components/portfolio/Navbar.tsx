@@ -35,7 +35,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 h-16 flex items-center justify-between">
         <a href="#" className="flex items-baseline gap-2">
-          <span className="font-serif italic text-2xl text-primary leading-none">ONR</span>
+          <span className="font-serif italic text-2xl text-primary leading-none">TheGlobalBusola</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
