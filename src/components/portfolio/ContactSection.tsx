@@ -13,9 +13,20 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="mb-16"
+          className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 mb-16"
         >
-          <p className="editorial-eyebrow mb-6">Contact</p>
+          <div className="md:col-span-4">
+            <p className="editorial-eyebrow mb-6">Contact</p>
+            <h2 className="font-serif text-4xl md:text-5xl leading-[1.05]">
+              Let's talk<br />
+              <span className="italic text-primary">product.</span>
+            </h2>
+          </div>
+          <div className="md:col-span-8 flex items-end">
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
+              If you're weighing what I could bring to your team, the fastest way to find out is to ask — reach out below.
+            </p>
+          </div>
         </motion.div>
 
         <div className="border-t border-border pt-16">
