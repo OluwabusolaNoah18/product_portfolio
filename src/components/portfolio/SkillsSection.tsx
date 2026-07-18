@@ -16,7 +16,7 @@ const skillCategories = [
   },
   {
     title: "Tools & Platforms",
-    skills: ["Jira", "Figma", "Notion", "Miro", "Mobbin", "Stitch", "Claude", "Confluence", "Mixpanel", "Google Analytics", "Postman", "Slack"],
+    skills: ["Jira", "Figma", "Notion", "Miro", "Mobbin", "Stitch", "Claude", "Confluence", "Mixpanel", "Google Analytics", "Postman", "Slack", "Aha!", "GitHub", "VS Code", "Vercel"],
   },
 ];
 
@@ -47,24 +47,24 @@ const SkillsSection = () => {
           </div>
         </motion.div>
 
-        <div className="border-t border-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border border border-border">
           {skillCategories.map((cat, i) => (
             <motion.div
               key={cat.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.08 * i }}
-              className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-10 md:py-12 border-b border-border"
+              className="group bg-background p-8 md:p-10 hover:bg-card/60 transition-colors"
             >
-              <div className="md:col-span-4">
-                <p className="font-serif italic text-primary text-2xl">0{i + 1}</p>
-                <h3 className="font-serif text-2xl md:text-3xl mt-2">{cat.title}</h3>
+              <div className="flex items-baseline justify-between mb-6">
+                <h3 className="font-serif text-2xl md:text-3xl">{cat.title}</h3>
+                <span className="font-serif italic text-primary text-xl shrink-0">0{i + 1}</span>
               </div>
-              <div className="md:col-span-8 flex flex-wrap gap-x-6 gap-y-3 md:pt-3">
+              <div className="flex flex-wrap gap-2">
                 {cat.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="text-sm text-foreground/85 border-b border-transparent hover:border-primary hover:text-primary transition-colors cursor-default"
+                    className="text-[10px] uppercase tracking-[0.2em] border border-border px-2.5 py-1.5 text-muted-foreground hover:border-primary hover:text-primary transition-colors cursor-default"
                   >
                     {skill}
                   </span>
