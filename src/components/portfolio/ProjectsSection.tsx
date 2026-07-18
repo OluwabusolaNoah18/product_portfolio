@@ -24,18 +24,29 @@ const ProjectsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border border border-border">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {caseStudies.map((project, i) => (
             <motion.article
               key={project.slug}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.05 * i }}
-              className="group relative bg-background p-8 md:p-10 flex flex-col"
+              className="group relative bg-card/40 border border-border p-8 md:p-10 flex flex-col overflow-hidden transition-colors hover:border-[var(--card-accent)]"
+              style={{ ["--card-accent" as string]: project.accent }}
             >
+              <span
+                className="absolute top-0 left-0 right-0 h-[3px]"
+                style={{ background: project.accent }}
+              />
+
               <div className="flex items-center justify-between mb-8">
-                <p className="editorial-eyebrow">Case Study 0{i + 1}</p>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-accent border border-accent/40 px-2.5 py-1">
+                <p className="editorial-eyebrow" style={{ color: project.accent }}>
+                  Case Study 0{i + 1}
+                </p>
+                <span
+                  className="text-[10px] uppercase tracking-[0.2em] border px-2.5 py-1"
+                  style={{ color: project.accent, borderColor: `${project.accent}66` }}
+                >
                   {project.differentiator}
                 </span>
               </div>
@@ -61,7 +72,10 @@ const ProjectsSection = () => {
 
               <Link
                 to={`/case-studies/${project.slug}`}
-                className="group/cta inline-flex items-center justify-between border-t border-border pt-5 text-[11px] uppercase tracking-[0.2em] font-semibold text-foreground hover:text-primary transition-colors"
+                className="group/cta inline-flex items-center justify-between border-t border-border pt-5 text-[11px] uppercase tracking-[0.2em] font-semibold text-foreground transition-colors"
+                style={{ color: undefined }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = project.accent)}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "")}
               >
                 Read Case Study in Full
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5" />
