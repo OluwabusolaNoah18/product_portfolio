@@ -39,8 +39,13 @@ const CaseStudyPage = () => {
             className="border-b border-border pb-12 mb-16"
           >
             <div className="flex items-center gap-3 mb-6">
-              <p className="editorial-eyebrow">Case Study 0{idx + 1}</p>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-accent border border-accent/40 px-2.5 py-1">
+              <p className="editorial-eyebrow" style={{ color: project.accent }}>
+                Case Study 0{idx + 1}
+              </p>
+              <span
+                className="text-[10px] uppercase tracking-[0.2em] border px-2.5 py-1"
+                style={{ color: project.accent, borderColor: `${project.accent}66` }}
+              >
                 {project.differentiator}
               </span>
             </div>
@@ -53,7 +58,7 @@ const CaseStudyPage = () => {
                 {project.scope}
               </p>
             )}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-6">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
@@ -63,6 +68,12 @@ const CaseStudyPage = () => {
                 </span>
               ))}
             </div>
+            {project.liveNote && (
+              <div className="inline-flex items-center gap-2 border border-accent/40 bg-accent/10 px-4 py-2.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
+                <p className="text-xs md:text-sm text-foreground/90">{project.liveNote}</p>
+              </div>
+            )}
           </motion.header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
@@ -89,22 +100,6 @@ const CaseStudyPage = () => {
                 )}
               </div>
             ))}
-          </div>
-
-          <div className="mt-16 pt-10 border-t border-border grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div className="md:col-span-4">
-              <h3 className="editorial-eyebrow text-accent">Why This Matters</h3>
-            </div>
-            <div className="md:col-span-8">
-              <p className="font-serif italic text-xl md:text-2xl leading-snug text-foreground/90">
-                {project.whyItMatters}
-              </p>
-              {project.footnote && (
-                <p className="mt-6 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                  Note {project.footnote}
-                </p>
-              )}
-            </div>
           </div>
 
           <Link
