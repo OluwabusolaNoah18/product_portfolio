@@ -17,7 +17,7 @@ const HeroSection = () => {
           <div className="space-y-5 max-w-3xl">
             <p className="editorial-eyebrow">Product Portfolio · 2026</p>
             <h1 className="font-serif italic leading-[0.9] text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary">
-              Fintech<br />Product Manager
+              Product Manager
             </h1>
           </div>
         </motion.header>
@@ -32,7 +32,7 @@ const HeroSection = () => {
           >
             <h2 className="font-serif text-3xl md:text-5xl leading-[1.08] mb-10 max-w-3xl">
               I build at the intersection of{" "}
-              <span className="text-accent italic">technical rigor</span> and user intuition turning ambiguous fintech problems into shipped, live infrastructure.
+              <span className="text-accent italic">technical rigor</span> and user intuition turning ambiguous problems into shipped, live infrastructure.
             </h2>
 
             <div className="flex flex-wrap gap-10">
