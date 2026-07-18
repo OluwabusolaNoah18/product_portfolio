@@ -1,25 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const chapters = [
-  {
-    label: "Design",
-    body: "Started in tech as a Product Designer trained me to obsess over the user's mental model before touching the solution.",
-  },
-  {
-    label: "Product",
-    body: "Moved into Product Management to own the outcome end-to-end, from discovery through live rollout and iteration.",
-  },
-  {
-    label: "QA",
-    body: "Completed coursework in QA Engineering to validate what ships. I still personally lead UAT and regression cycles.",
-  },
-  {
-    label: "Research",
-    body: "Background in biochemistry research the same hypothesis-test-evidence loop now shapes how I scope product bets.",
-  },
-];
-
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -48,25 +29,10 @@ const AboutSection = () => {
               Underneath it all is my background in biochemistry research: the same instinct that trained me to form a hypothesis, test it, and let evidence not assumption decide the next step now shows up in how I scope and validate product decisions.
             </p>
             <p>
-              I specialize in building scalable payment gateways, embedded finance solutions, and API-first products that drive measurable business impact. My approach combines data-driven decision making with agile methodologies to deliver products that users love and businesses rely on.
+              I specialize in building scalable products that drive measurable business impact. My approach combines data-driven decision making with agile methodologies to deliver products that users love and businesses rely on.
             </p>
           </div>
         </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 border-t border-border">
-          {chapters.map((c, i) => (
-            <motion.div
-              key={c.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: 0.08 * i }}
-              className="py-10 md:py-12 md:px-8 border-b md:border-b-0 md:border-r border-border last:border-r-0 first:md:pl-0"
-            >
-              <p className="editorial-eyebrow mb-4">0{i + 1} / {c.label}</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">{c.body}</p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
