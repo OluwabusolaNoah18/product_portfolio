@@ -7,10 +7,10 @@ export type CaseStudy = {
   scope?: string;
   summary: string;
   differentiator: string;
+  accent: string;
   tags: string[];
   sections: Section[];
-  whyItMatters: string;
-  footnote?: string;
+  liveNote?: string;
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -22,6 +22,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Broke a card only payment ecosystem open by shipping virtual accounts, wallet, and instant settlement across web, gateway, and POS.",
     differentiator: "Ecosystem Expansion",
+    accent: "#c9a84c",
     tags: ["Payment Channels", "Virtual Accounts", "Bank Partnerships", "Ops Tooling"],
     sections: [
       {
@@ -77,10 +78,7 @@ export const caseStudies: CaseStudy[] = [
         ],
       },
     ],
-    whyItMatters:
-      "Demonstrates market awareness (spotting a shift in payment behavior early), product thinking beyond the feature (enabling transfers required new infrastructure and tooling, not just a UI toggle), cross functional execution across external partners and internal teams, and clear business impact.",
-    footnote:
-      "PayContactless one of the products this work supported is live on the Google Play Store as a public Android app.",
+    liveNote: "One of the products this work supported, PayContactless, is live on the Google Play Store as a public Android app.",
   },
   {
     slug: "mid-orchestration",
@@ -89,6 +87,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Decoupled MIDs from merchants and shipped a rule based routing engine with cascading failover, dynamic load balancing, and non technical admin control.",
     differentiator: "Platform Infrastructure",
+    accent: "#7ea8a3",
     tags: ["Payment Orchestration", "MID Routing", "Failover", "PCI-DSS", "Platform"],
     sections: [
       {
@@ -110,11 +109,6 @@ export const caseStudies: CaseStudy[] = [
           "Admin/ops dashboard, rule creation, prioritization, MID management, and permissions with no dev dependency",
           "Compliance and audit, PCI-DSS requirements and a full audit trail for every routing decision and config change",
           "Extensibility, future acquirers or payment methods added without rearchitecting the core",
-        ],
-      },
-      {
-        heading: "Solution Scoped",
-        bullets: [
           "MID Registry, a centralized, always updatable registry decoupled from any single merchant/PSP",
           "Real time rule based routing engine with millisecond level decisioning",
           "Cascading failover, automatic, invisible retry on a secondary acquirer when the primary fails",
@@ -143,17 +137,21 @@ export const caseStudies: CaseStudy[] = [
           "Strengthened compliance posture with built in PCI-DSS considerations and full audit trail",
         ],
       },
+      {
+        heading: "Lessons Learned",
+        body:
+          "Meeting every requirement in the original spec was only the start. Once the platform went live, real transaction patterns and scale surfaced things no design document could fully anticipate, and several rounds of refactoring followed the first MVP deployment. That wasn't a sign the plan was wrong — it reinforced a principle I carry into every platform launch: no product is ever fully finished at first release, and continuous iteration after go-live is expected, not exceptional.",
+      },
     ],
-    whyItMatters:
-      "Demonstrates systems level product thinking (a platform capability spanning compliance, infrastructure, and operations), translating ambiguous business goals into buildable specs, proactive risk and compliance awareness, technical fluency with engineering on architecture tradeoffs, and ownership through delivery.",
   },
   {
     slug: "merchant-onboarding",
-    title: "Merchant Onboarding & Portal Growth",
+    title: "Merchant Onboarding Revamp",
     meta: "Product Manager · Conversion / UX Optimization · Prophius LTD",
     summary:
       "Cut friction in the merchant creation flow without weakening KYC, unlocking a 32.5% merchant base growth in 17 months.",
     differentiator: "Growth & Conversion",
+    accent: "#c07a68",
     tags: ["Merchant Onboarding", "Portal UX", "Conversion Optimization"],
     sections: [
       {
@@ -186,9 +184,12 @@ export const caseStudies: CaseStudy[] = [
           "Cleared a real growth constraint by reducing time to activate at the point of highest drop off",
         ],
       },
+      {
+        heading: "Lessons Learned",
+        body:
+          "Simplicity was the goal going in, but not everything in the flow could be cut — steps like KYC were non-negotiable regardless of how much friction they added. The bigger surprise came during the build phase: several parts of the original flow turned out to be dependent on earlier implementation decisions that hadn't been factored into the initial redesign plan. Untangling those dependencies mid-build reshaped the scope of the project and reinforced how much of onboarding work is really about respecting what's already load-bearing underneath the flow, not just simplifying what's visible on the surface.",
+      },
     ],
-    whyItMatters:
-      "Shows a different register of product work from the other two case studies growth and conversion thinking, not just infrastructure scoping. Demonstrates the ability to move a business metric (merchant base size) through a UX level intervention, not just a technical build.",
   },
 ];
 
