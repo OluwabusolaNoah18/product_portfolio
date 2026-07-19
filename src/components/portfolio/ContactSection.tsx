@@ -61,7 +61,7 @@ const ContactSection = () => {
                   </span>
                 </a>
                 <a
-                  href="https://drive.google.com/drive/folders/1nHpULQOdzAYnsSXycSJV2xvc-qaWlHwx?usp=drive_link"
+                  href="https://drive.google.com/file/d/1u39oSg75Br1GeXPoGYW4xWgN43kL1nb8/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-foreground hover:text-primary transition-colors"
