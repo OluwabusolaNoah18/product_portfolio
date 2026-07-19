@@ -38,7 +38,7 @@ const experiences = [
     company: "iTCloser",
     role: "Product Manager",
     type: "Contract · 3 months",
-    period: "Dec 2025 – Feb 2026",
+    period: "Dec 2024 – Feb 2026",
     location: "Remote",
   },
   {
