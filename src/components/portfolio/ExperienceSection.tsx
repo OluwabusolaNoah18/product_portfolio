@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 
-const CV_URL = "https://drive.google.com/file/d/1u39oSg75Br1GeXPoGYW4xWgN43kL1nb8/view?usp=drive_link";
+const CV_URL = "https://drive.google.com/file/d/1vAczkK5wzzhjiNRSDauxruykdIgYrgMn/view?usp=drive_link";
 
 const experiences = [
   {
