@@ -24,7 +24,7 @@ const ContactSection = () => {
           </div>
           <div className="md:col-span-8 flex items-end">
             <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
-              If you're weighing what I could bring to your team, the fastest way to find out is to ask — reach out below.
+              If you're weighing what I could bring to your team, the fastest way to find out is to ask - reach out below.
             </p>
           </div>
         </motion.div>
@@ -61,7 +61,7 @@ const ContactSection = () => {
                   </span>
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1u39oSg75Br1GeXPoGYW4xWgN43kL1nb8/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1vAczkK5wzzhjiNRSDauxruykdIgYrgMn/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 text-foreground hover:text-primary transition-colors"
